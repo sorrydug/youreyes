@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Для моей любимой 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 50px;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, #b993d6, #8ca6db); /* Градиентный фон (фиолетово-розовый) */
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #8e0038;
+    }
+
+    h2 {
+      font-size: 2em;
+      color: #4b0082;  
+      margin-top: 30px;
+    }
+
+    p {
+      font-size: 1.3em;
+      color: #4b0082;
+      line-height: 1.6em;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    iframe {
+      margin-top: 40px;
+      border-radius: 10px;
+      color: #4b0082;
+    }
+
+    /* СТИЛИ ДЛЯ ПАДАЮЩИХ ЗВЁЗД */
+    .star {
+      position: fixed;
+      top: -20px;
+      font-size: 16px;
+      color: #ffffff;
+      animation: fall 5s linear;
+      pointer-events: none;
+      opacity: 0.8;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Самому Чудному Чуду</h1>
+  <p>Очень сильно по тебе скучаю</p>
+
+  <h2>Безумно тоскливо без тебя</h2>
+  <p>Кофточка идеально на тебе смотрится</p>
+
+  <!-- ВСТРОЕННЫЙ YOUTUBE-ПЛЕЕР -->
+  <iframe width="300" height="170"
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+    title="Музыка для тебя"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+
+  <!-- СКРИПТ ДЛЯ ПАДАЮЩИХ ЗВЁЗД -->
+  <script>
+    function createStar() {
+      const star = document.createElement("div");
+      star.classList.add("star");
+      star.style.left = Math.random() * 100 + "vw";
+      star.style.fontSize = (Math.random() * 10 + 10) + "px";
+      star.innerText = "★";
+      document.body.appendChild(star);
+      setTimeout(() => star.remove(), 5000);
+    }
+
+    setInterval(createStar, 200); // создаёт звезду каждые 200 мс
+  </script>
+
+</body>
+</html>
